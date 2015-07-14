@@ -6,9 +6,10 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"fmt"
-	"github.com/Ariemeth/mech"
 	"os"
 	"strconv"
+
+	"github.com/Ariemeth/mech"
 )
 
 func check(e error) {
