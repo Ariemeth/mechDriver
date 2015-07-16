@@ -13,11 +13,15 @@ func check(e error) {
 
 func main() {
 
-	mech1 := mech.NewMech(mech.Weapon{Range: 5, Damage: 1}, "Mech1")
-	mech2 := mech.NewMech(mech.Weapon{Range: 3, Damage: 3}, "Mech2")
+	mech1 := mech.NewMech("Mech1")
+	mech2 := mech.NewMech("Mech2")
 
-	mech1.Fire(2, mech2)
-	
-//	mech3 := mech.Mech{Weapons:mech.Weapon{Range: 5, Damage: 1}, Name:"testMech3"}
-//	mech3.Fire(mech1)
+	weapon1 := mech.Weapon{Range: 5, Damage: 1}
+	weapon2 := mech.Weapon{Range: 3, Damage: 3}
+
+	mech1.AddWeapon(weapon1)
+	mech2.AddWeapon(weapon2)
+
+	mech1.Fire(4, mech2)
+
 }
